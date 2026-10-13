@@ -1,52 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>VK — Contact</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap">
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/contact.css">
-</head>
-<body>
-<header><div class="wrap">
- <a class="logo" href="index.html" aria-label="VK home">VK</a>
- <nav id="nav" aria-label="Main">
-  <a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a href="skills.html">Skills</a><a href="experience.html">Experience</a>
-  <span class="bar"></span>
- </nav>
- <a class="btn on" href="#" aria-current="page">Let's Talk <span>→</span></a>
-</div></header>
 
-<main class="wrap">
- <section class="hero">
-  <span class="mono">Contact</span>
-  <h1 id="h1">Let's build <span class="l2">something <span class="r">cool</span></span></h1>
-  <svg class="draw under" width="260" height="22" viewBox="0 0 260 22" fill="none" stroke="#ff2d2d" stroke-width="2.4" stroke-linecap="round"><path d="M4 16 C 60 4, 150 4, 256 12"/></svg>
- </section>
+  <head>
+    <meta charset="utf-8">
+    <title>VK — Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/contact.css">
+  </head>
 
- <section class="grid">
-  <form id="f" novalidate>
-   <label class="field"><span>Name</span><input id="n" name="name" autocomplete="name" required></label>
-   <label class="field"><span>Email</span><input id="e" name="email" type="email" autocomplete="email" required></label>
-   <label class="field"><span>Message</span><textarea id="m" name="message" required></textarea></label>
-   <div class="row"><button class="btn solid" type="submit">Send message <span>→</span></button><span class="status" id="s" role="status"></span></div>
-  </form>
+  <body>
+    <header>
+      <div class="wrap">
+        <a class="logo" href="index.html" aria-label="VK home">VK</a>
+        <nav id="nav" aria-label="Main">
+          <a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a href="skills.html">Skills</a><a href="experience.html">Experience</a>
+          <span class="bar"></span>
+        </nav>
+        <a class="btn on" href="#" aria-current="page">Let's Talk <span>→</span></a>
+      </div>
+    </header>
 
-  <aside class="side">
-   <span class="hand">say hi.</span>
-   <div class="art"></div>
-   <ul class="links">
-    <li><a href="mailto:hello@example.com"><span class="mono">Email</span><span>hello@example.com</span><span class="go">→</span></a></li>
-    <li><a href="#"><span class="mono">GitHub</span><span>github.com/username</span><span class="go">→</span></a></li>
-    <li><a href="#"><span class="mono">LinkedIn</span><span>linkedin.com/in/username</span><span class="go">→</span></a></li>
-    <li><div class="plain"><span class="mono">Location</span><span>India</span></div></li>
-   </ul>
-  </aside>
- </section>
-</main>
-<footer class="wrap foot"><span class="logo">VK</span><span class="mono">© 2026 Vansh · Contact</span></footer>
+    <main class="wrap">
+      <section class="hero">
+        <span class="mono">Contact</span>
+        <h1 id="h1">Let's build <span class="l2">something <span class="r">cool</span></span></h1>
+        <svg class="draw under" width="260" height="22" viewBox="0 0 260 22" fill="none" stroke="#ff2d2d" stroke-width="2.4" stroke-linecap="round">
+          <path d="M4 16 C 60 4, 150 4, 256 12" />
+        </svg>
+      </section>
 
-<script src="js/main.js" defer></script>
-</body>
+      <section class="grid">
+        <form id="f" novalidate>
+          <label class="field"><span>Name</span><input id="n" name="name" autocomplete="name" required></label>
+          <label class="field"><span>Email</span><input id="e" name="email" type="email" autocomplete="email" required></label>
+          <label class="field"><span>Message</span><textarea id="m" name="message" required></textarea></label>
+          <div class="row"><button class="btn solid" type="submit">Send message <span>→</span></button><span class="status" id="s" role="status"></span></div>
+        </form>
+
+        <aside class="side">
+          <span class="hand">say hi.</span>
+          <div class="art"></div>
+          <ul class="links">
+            <li><a href="mailto:hello@example.com"><span class="mono">Email</span><span>hello@example.com</span><span class="go">→</span></a></li>
+            <li><a href="#"><span class="mono">GitHub</span><span>github.com/username</span><span class="go">→</span></a></li>
+            <li><a href="#"><span class="mono">LinkedIn</span><span>linkedin.com/in/username</span><span class="go">→</span></a></li>
+            <li>
+              <div class="plain"><span class="mono">Location</span><span>India</span></div>
+            </li>
+          </ul>
+        </aside>
+      </section>
+    </main>
+    <footer class="wrap foot"><span class="logo">VK</span><span class="mono">© 2026 Vansh · Contact</span></footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+
 </html>

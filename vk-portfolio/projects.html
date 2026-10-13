@@ -1,69 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>VK — Projects</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap">
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/projects.css">
-</head>
-<body>
-<header><div class="wrap">
- <a class="logo" href="index.html" aria-label="VK home">VK</a>
- <nav id="nav" aria-label="Main">
-  <a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html" class="on" aria-current="page">Projects</a><a href="skills.html">Skills</a><a href="experience.html">Experience</a>
-  <span class="bar"></span>
- </nav>
- <a class="btn" href="contact.html">Let's Talk <span>→</span></a>
-</div></header>
 
-<main class="wrap">
- <section class="hero">
-  <div class="mono">// projects — 2026</div>
-  <h1 id="h1"><span class="ln">Things I've</span><span class="l2 r">built</span></h1>
-  <div class="note"><span class="hand">shipped, broken,<br>then fixed.</span>
-   <svg class="draw" width="90" height="60" viewBox="0 0 90 60" fill="none" stroke="#ff2d2d" stroke-width="1.6" stroke-linecap="round"><path d="M8 4 C 20 40, 50 50, 82 46"/><path d="M70 38 L83 46 L69 54"/></svg></div>
-  <div class="side"><span class="mono">Web · Games · AI</span><span class="mono">Placeholder content —</span><span class="mono">swap in real work</span></div>
- </section>
+  <head>
+    <meta charset="utf-8">
+    <title>VK — Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/projects.css">
+  </head>
 
- <div class="filters" role="group" aria-label="Filter projects">
-  <span class="mono">Filter</span>
-  <button class="tag on" data-f="all">All</button>
-  <button class="tag" data-f="web">Web</button>
-  <button class="tag" data-f="game">Game dev</button>
-  <button class="tag" data-f="ai">AI / ML</button>
-  <button class="tag" data-f="tool">Tools</button>
- </div>
+  <body>
+    <header>
+      <div class="wrap">
+        <a class="logo" href="index.html" aria-label="VK home">VK</a>
+        <nav id="nav" aria-label="Main">
+          <a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html" class="on" aria-current="page">Projects</a><a href="skills.html">Skills</a><a href="experience.html">Experience</a>
+          <span class="bar"></span>
+        </nav>
+        <a class="btn" href="contact.html">Let's Talk <span>→</span></a>
+      </div>
+    </header>
 
- <article class="feat">
-  <span class="num" aria-hidden="true">01</span>
-  <div class="art" data-slot="featured screenshot / key art"></div>
-  <div class="body">
-   <span class="mono">Featured build · Status: in progress</span>
-   <h2>Project <span class="r">name</span></h2>
-   <p>One sharp sentence on the problem it solves and what you personally built. Replace this with the real story: the constraint, the decision, the result.</p>
-   <div class="stat"><div><b>2026</b><span class="mono">Started</span></div><div><b>Solo</b><span class="mono">Role</span></div><div><b>v0.4</b><span class="mono">Build</span></div></div>
-   <div class="tags"><i>Python</i><i>PyTorch</i><i>React</i><i>Unity</i></div>
-   <div class="acts"><a class="btn solid" href="#">Live demo <span>→</span></a><a class="btn ghost" href="#">GitHub</a></div>
-  </div>
-  <span class="hand">the one I'm proudest of</span>
- </article>
+    <main class="wrap">
+      <section class="hero">
+        <div class="mono">// projects — 2026</div>
+        <h1 id="h1"><span class="ln">Things I've</span><span class="l2 r">built</span></h1>
+        <div class="note"><span class="hand">shipped, broken,<br>then fixed.</span>
+          <svg class="draw" width="90" height="60" viewBox="0 0 90 60" fill="none" stroke="#ff2d2d" stroke-width="1.6" stroke-linecap="round">
+            <path d="M8 4 C 20 40, 50 50, 82 46" />
+            <path d="M70 38 L83 46 L69 54" />
+          </svg>
+        </div>
+        <div class="side"><span class="mono">Web · Games · AI</span><span class="mono">Placeholder content —</span><span class="mono">swap in real work</span></div>
+      </section>
 
- <section class="sub" id="grid">
-  <article class="p p1" data-c="game"><div class="art" data-slot="game screenshot"></div><span class="mono">02 · Game dev</span><h3>Game title</h3><p>Short description of the mechanic and the engine it runs on.</p><div class="tags"><i>Unity</i><i>C#</i></div><div class="links"><a href="#">GitHub</a><a href="#">Play</a></div></article>
-  <article class="p p2" data-c="ai"><span class="hand">2 a.m. idea</span><div class="art" data-slot="model output / UI"></div><span class="mono">03 · AI / ML</span><h3>Model project</h3><p>What it predicts or generates, and how well it works.</p><div class="tags"><i>PyTorch</i><i>Python</i></div><div class="links"><a href="#">GitHub</a><a href="#">Live demo</a></div></article>
-  <article class="p p3" data-c="web"><div class="art" data-slot="site screenshot"></div><span class="mono">04 · Web</span><h3>Web app</h3><p>A full-stack build: who uses it and what it does for them.</p><div class="tags"><i>React</i><i>Node</i><i>MongoDB</i></div><div class="links"><a href="#">GitHub</a><a href="#">Live demo</a></div></article>
-  <article class="p p4" data-c="tool"><div class="art" data-slot="cli / tool shot"></div><span class="mono">05 · Tools</span><h3>Dev tool</h3><p>A small utility built to scratch a personal itch.</p><div class="tags"><i>Rust</i></div><div class="links"><a href="#">GitHub</a></div></article>
- </section>
+      <div class="filters" role="group" aria-label="Filter projects">
+        <span class="mono">Filter</span>
+        <button class="tag on" data-f="all">All</button>
+        <button class="tag" data-f="web">Web</button>
+        <button class="tag" data-f="game">Game dev</button>
+        <button class="tag" data-f="ai">AI / ML</button>
+        <button class="tag" data-f="tool">Tools</button>
+      </div>
 
- <section class="end" id="contact">
-  <h2>Got an idea?<br>Let's <span class="r">build</span> it.</h2>
-  <a class="btn solid" href="#">Let's Talk <span>→</span></a>
- </section>
-</main>
-<footer><div class="wrap"><span class="mono">VK — Projects — 2026</span></div></footer>
+      <article class="feat">
+        <span class="num" aria-hidden="true">01</span>
+        <div class="art" data-slot="featured screenshot / key art"></div>
+        <div class="body">
+          <span class="mono">Featured build · Status: in progress</span>
+          <h2>Project <span class="r">name</span></h2>
+          <p>One sharp sentence on the problem it solves and what you personally built. Replace this with the real story: the constraint, the decision, the result.</p>
+          <div class="stat">
+            <div><b>2026</b><span class="mono">Started</span></div>
+            <div><b>Solo</b><span class="mono">Role</span></div>
+            <div><b>v0.4</b><span class="mono">Build</span></div>
+          </div>
+          <div class="tags"><i>Python</i><i>PyTorch</i><i>React</i><i>Unity</i></div>
+          <div class="acts"><a class="btn solid" href="#">Live demo <span>→</span></a><a class="btn ghost" href="#">GitHub</a></div>
+        </div>
+        <span class="hand">the one I'm proudest of</span>
+      </article>
 
-<script src="js/main.js" defer></script>
-</body>
+      <section class="sub" id="grid">
+        <article class="p p1" data-c="game">
+          <div class="art" data-slot="game screenshot"></div><span class="mono">02 · Game dev</span>
+          <h3>Game title</h3>
+          <p>Short description of the mechanic and the engine it runs on.</p>
+          <div class="tags"><i>Unity</i><i>C#</i></div>
+          <div class="links"><a href="#">GitHub</a><a href="#">Play</a></div>
+        </article>
+        <article class="p p2" data-c="ai"><span class="hand">2 a.m. idea</span>
+          <div class="art" data-slot="model output / UI"></div><span class="mono">03 · AI / ML</span>
+          <h3>Model project</h3>
+          <p>What it predicts or generates, and how well it works.</p>
+          <div class="tags"><i>PyTorch</i><i>Python</i></div>
+          <div class="links"><a href="#">GitHub</a><a href="#">Live demo</a></div>
+        </article>
+        <article class="p p3" data-c="web">
+          <div class="art" data-slot="site screenshot"></div><span class="mono">04 · Web</span>
+          <h3>Web app</h3>
+          <p>A full-stack build: who uses it and what it does for them.</p>
+          <div class="tags"><i>React</i><i>Node</i><i>MongoDB</i></div>
+          <div class="links"><a href="#">GitHub</a><a href="#">Live demo</a></div>
+        </article>
+        <article class="p p4" data-c="tool">
+          <div class="art" data-slot="cli / tool shot"></div><span class="mono">05 · Tools</span>
+          <h3>Dev tool</h3>
+          <p>A small utility built to scratch a personal itch.</p>
+          <div class="tags"><i>Rust</i></div>
+          <div class="links"><a href="#">GitHub</a></div>
+        </article>
+      </section>
+
+      <section class="end" id="contact">
+        <h2>Got an idea?<br>Let's <span class="r">build</span> it.</h2>
+        <a class="btn solid" href="#">Let's Talk <span>→</span></a>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap"><span class="mono">VK — Projects — 2026</span></div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+
 </html>

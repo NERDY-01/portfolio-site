@@ -1,23 +1,141 @@
 /* Shared design tokens and components. Page files (css/<page>.css) add layout on top. */
-:root{--bg:#0a0a0b;--surf:#111113;--red:#ff2d2d;--crim:#7a1414;--txt:#ecebe8;--dim:#9a9aa0;--line:#2a2a2f;
---disp:'Anton','Impact',sans-serif;--sans:'Inter',system-ui,sans-serif;--hand:'Caveat',cursive;--mono:'JetBrains Mono',monospace;color-scheme:dark}
-*,*::before,*::after{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--txt);font:400 16px/1.65 var(--sans);overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-:focus-visible{outline:2px solid var(--red);outline-offset:3px}
-.wrap{max-width:1160px;margin:0 auto;padding:0 32px}
-.r{color:var(--red)}
-.mono{font-family:var(--mono);font-size:12px;color:var(--dim)}
-.hand{font:600 26px/1.05 var(--hand);color:var(--red);display:inline-block;transform:rotate(-5deg)}
+:root {
+  --bg: #0a0a0b;
+  --surf: #111113;
+  --red: #ff2d2d;
+  --crim: #7a1414;
+  --txt: #ecebe8;
+  --dim: #9a9aa0;
+  --line: #2a2a2f;
+  --disp: 'Anton', 'Impact', sans-serif;
+  --sans: 'Inter', system-ui, sans-serif;
+  --hand: 'Caveat', cursive;
+  --mono: 'JetBrains Mono', monospace;
+  color-scheme: dark
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--txt);
+  font: 400 16px/1.65 var(--sans);
+  overflow-x: hidden
+}
+
+a {
+  color: inherit;
+  text-decoration: none
+}
+
+:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px
+}
+
+.wrap {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 32px
+}
+
+.r {
+  color: var(--red)
+}
+
+.mono {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--dim)
+}
+
+.hand {
+  font: 600 26px/1.05 var(--hand);
+  color: var(--red);
+  display: inline-block;
+  transform: rotate(-5deg)
+}
+
 /* buttons */
-.btn{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:500;padding:12px 22px;border:1px solid var(--red);border-radius:3px;transition:background .2s}
-.btn span{transition:transform .2s}.btn:hover span{transform:translateX(4px)}
-.btn.solid{background:var(--red);color:#fff}.btn.solid:hover{background:#e01f1f}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 22px;
+  border: 1px solid var(--red);
+  border-radius: 3px;
+  transition: background .2s
+}
+
+.btn span {
+  transition: transform .2s
+}
+
+.btn:hover span {
+  transform: translateX(4px)
+}
+
+.btn.solid {
+  background: var(--red);
+  color: #fff
+}
+
+.btn.solid:hover {
+  background: #e01f1f
+}
+
 /* animated heading (built by js/main.js) */
-.w{display:inline-block;white-space:nowrap}
-.c{display:inline-block;opacity:0;transform:translateY(24px);animation:up .6s cubic-bezier(.2,.7,.2,1) forwards}
-@keyframes up{to{opacity:1;transform:none}}
+.w {
+  display: inline-block;
+  white-space: nowrap
+}
+
+.c {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(24px);
+  animation: up .6s cubic-bezier(.2, .7, .2, 1) forwards
+}
+
+@keyframes up {
+  to {
+    opacity: 1;
+    transform: none
+  }
+}
+
 /* red line that draws itself (SVG path inside .draw) */
-.draw path{stroke-dasharray:500;stroke-dashoffset:500;animation:draw 1.2s .8s forwards ease-out}
-@keyframes draw{to{stroke-dashoffset:0}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.c{opacity:1;transform:none}.draw path{stroke-dashoffset:0}}
+.draw path {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: draw 1.2s .8s forwards ease-out
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  * {
+    animation: none !important;
+    transition: none !important
+  }
+
+  .c {
+    opacity: 1;
+    transform: none
+  }
+
+  .draw path {
+    stroke-dashoffset: 0
+  }
+}
