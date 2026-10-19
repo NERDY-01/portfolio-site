@@ -105,7 +105,6 @@
   // 5. Contact form: opens the visitor's email app. Swap for Formspree/EmailJS to send directly.
   var form = $('#f');
   if (form) form.addEventListener('submit', function (ev) {
-    ev.preventDefault();
     var n = $('#n').value.trim(),
       e = $('#e').value.trim(),
       m = $('#m').value.trim(),
