@@ -78,7 +78,7 @@ a {
 
 .hand {
   font: 600 26px/1.05 var(--hand);
-  color: var(--red);
+  color: var(--txt);
   display: inline-block;
   transform: rotate(-4deg)
 }
@@ -163,7 +163,7 @@ nav .bar {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
   gap: 56px;
-  align-items: end;
+  align-items: center;
   padding: 32px 0 64px
 }
 
@@ -190,7 +190,94 @@ nav .bar {
 .hero p {
   color: #c4c3bf;
   max-width: 40ch;
-  margin: 0 0 18px
+  margin: 22px 0 18px
+}
+
+.hero-frame {
+  position: relative;
+  min-height: 300px;
+  padding: 28px 30px;
+  border: 1px solid var(--red);
+  box-shadow: 0 0 0 6px var(--bg), 0 0 0 7px var(--crim);
+  background:
+    radial-gradient(circle at 85% 15%, rgba(255, 45, 45, .18), transparent 42%),
+    repeating-linear-gradient(-55deg, #131315 0 10px, #0e0e10 10px 20px);
+  transform: rotate(1.5deg)
+}
+
+.hero-frame::before {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border: 1px solid rgba(255, 45, 45, .22);
+  pointer-events: none
+}
+
+.frame-kicker,
+.frame-index {
+  position: relative;
+  z-index: 1;
+  font: 400 11px var(--mono);
+  color: var(--dim);
+  letter-spacing: .08em;
+  text-transform: uppercase
+}
+
+.frame-track {
+  position: relative;
+  display: grid;
+  gap: 24px;
+  margin: 28px 0 20px 8px;
+  padding-left: 24px
+}
+
+.frame-track::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 4px;
+  width: 1px;
+  background: linear-gradient(var(--red), var(--crim))
+}
+
+.frame-track > div {
+  position: relative;
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  align-items: baseline;
+  column-gap: 12px
+}
+
+.frame-track > div > i {
+  position: absolute;
+  left: -24px;
+  top: 7px;
+  width: 9px;
+  height: 9px;
+  border: 1px solid var(--red);
+  border-radius: 50%;
+  background: var(--bg)
+}
+
+.frame-track > div:last-child > i {
+  background: var(--red);
+  box-shadow: 0 0 0 4px rgba(255, 45, 45, .14)
+}
+
+.frame-year {
+  font: 400 22px/1 var(--disp);
+  color: var(--red)
+}
+
+.frame-label {
+  color: var(--txt);
+  font-size: 13px
+}
+
+.frame-index {
+  display: block;
+  text-align: right
 }
 
 .key {
@@ -221,7 +308,36 @@ nav .bar {
   border-radius: 0;
   transform: rotate(45deg)
 }
+.art {
+  position: relative;
+  aspect-ratio: 4/5;
+  background: linear-gradient(115deg, transparent 55%, rgba(255, 45, 45, .22) 56%, transparent 57.5%), radial-gradient(circle at 60% 25%, #2a1414, transparent 55%), repeating-linear-gradient(-55deg, #131315 0 10px, #0e0e10 10px 20px);
+  border: 1px solid var(--red);
+  box-shadow: 0 0 0 6px var(--bg), 0 0 0 7px var(--crim);
+  transform: rotate(1.5deg)
+}
 
+.art::after {
+  content: attr(data-slot);
+  position: absolute;
+  left: 12px;
+  bottom: 10px;
+  font: 400 11px var(--mono);
+  color: #6a6a70
+}
+
+.artwrap {
+  position: relative
+}
+
+.artwrap .hand {
+  position: absolute;
+  left: -20px;
+  bottom: -30px
+}
+.pageframe{
+  width: 100%;
+}
 /* timeline */
 .tl {
   position: relative;

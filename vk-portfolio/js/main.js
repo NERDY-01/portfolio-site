@@ -115,6 +115,6 @@
       return
     }
     s.textContent = 'Opening your email app…';
-    location.href = 'mailto:hello@example.com?subject=' + encodeURIComponent('Message from ' + n) + '&body=' + encodeURIComponent(m + '\n\n— ' + n + ' (' + e + ')');
+    location.href = 'mailto:vanshkumarchandelofficial@gmail.com?subject=' + encodeURIComponent('Message from ' + n) + '&body=' + encodeURIComponent(m + '\n\n— ' + n + ' (' + e + ')');
   });
 })();

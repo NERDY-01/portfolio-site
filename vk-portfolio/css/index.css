@@ -193,7 +193,7 @@ nav .bar {
 }
 
 .art::after {
-  content: "character art goes here";
+  /* content: "character art goes here"; */
   position: absolute;
   right: 14px;
   top: 12px;
@@ -314,6 +314,12 @@ h1 .c {
   bottom: 8px;
   font: 400 11px var(--mono);
   color: #77777d;
+}
+.p1_thumbnail{
+  width: 187px;
+  height:100%;
+  display: block;
+  object-fit: fill;
 }
 
 .card:nth-child(2) {
@@ -512,6 +518,74 @@ h1 .c {
   transform: translateX(6px);
 }
 
+.coding {
+  display: grid;
+  grid-template-columns: 1.4fr .6fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.coding-copy h2 {
+  max-width: 12ch;
+  margin-top: 12px;
+}
+
+.coding-copy p {
+  max-width: 48ch;
+  margin: 20px 0 0;
+  color: #c4c3bf;
+}
+
+.coding-copy .link {
+  display: inline-block;
+  margin-top: 14px;
+}
+
+.coding-stat {
+  position: relative;
+  display: flex;
+  min-height: 240px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid var(--red);
+  background: radial-gradient(circle at 50% 55%, rgba(255, 45, 45, .16), transparent 55%), var(--surf);
+  box-shadow: 0 0 0 6px var(--bg), 0 0 0 7px var(--crim);
+}
+
+.coding-stat strong {
+  position: relative;
+  z-index: 1;
+  margin-top: 8px;
+  font: 400 clamp(76px, 10vw, 128px)/.9 var(--disp);
+  color: var(--txt);
+}
+
+.coding-stat strong span {
+  color: var(--red);
+}
+
+.coding-caption {
+  position: relative;
+  z-index: 1;
+  margin-top: 8px;
+  font: 400 12px var(--mono);
+  color: var(--dim);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
+.coding-rule {
+  position: absolute;
+  right: -30px;
+  bottom: 28px;
+  width: 75%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--red), transparent);
+  transform: rotate(-25deg);
+}
+
 .nowrows {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -575,6 +649,19 @@ h1 .c {
   .nowrows {
     grid-template-columns: 1fr;
     border-left: 2px solid var(--red);
+  }
+
+  .coding {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .coding-copy h2 {
+    max-width: 16ch;
+  }
+
+  .coding-stat {
+    min-height: 210px;
   }
 
   .nowrows div+div {

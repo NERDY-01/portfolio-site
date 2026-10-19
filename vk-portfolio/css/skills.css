@@ -217,7 +217,9 @@ nav .bar {
   left: -20px;
   bottom: -30px
 }
-
+.pageframe{
+  width: 100%;;
+}
 .legend {
   display: flex;
   gap: 28px;

@@ -253,6 +253,10 @@ h2 {
   font: 400 11px var(--mono);
   color: #6a6a70
 }
+.mypic{
+  width:100%;
+  height: auto;
+}
 
 .artwrap .hand {
   position: absolute;
@@ -317,6 +321,92 @@ h2 {
   margin: 0;
   color: #b4b3af;
   max-width: 58ch
+}
+
+.coding {
+  display: grid;
+  grid-template-columns: 1.4fr .6fr;
+  gap: 48px;
+  align-items: center
+}
+
+.coding-copy > .mono {
+  display: block;
+  margin-bottom: 12px
+}
+
+.coding-copy h2 {
+  max-width: 12ch;
+  margin: 0
+}
+
+.coding-copy p {
+  max-width: 48ch;
+  margin: 20px 0 0;
+  color: #c4c3bf
+}
+
+.coding-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 14px;
+  border-bottom: 1px solid var(--red);
+  padding-bottom: 2px;
+  transition: color .2s
+}
+
+.coding-link:hover {
+  color: var(--red)
+}
+
+.coding-stat {
+  position: relative;
+  display: flex;
+  min-height: 240px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid var(--red);
+  background: radial-gradient(circle at 50% 55%, rgba(255, 45, 45, .16), transparent 55%), var(--surf);
+  box-shadow: 0 0 0 6px var(--bg), 0 0 0 7px var(--crim)
+}
+
+.coding-stat > .mono {
+  position: relative;
+  z-index: 1
+}
+
+.coding-stat strong {
+  position: relative;
+  z-index: 1;
+  margin-top: 8px;
+  font: 400 clamp(76px, 10vw, 128px)/.9 var(--disp);
+  color: var(--txt)
+}
+
+.coding-stat strong span {
+  color: var(--red)
+}
+
+.coding-caption {
+  position: relative;
+  z-index: 1;
+  margin-top: 8px;
+  font: 400 12px var(--mono);
+  color: var(--dim);
+  text-transform: uppercase;
+  letter-spacing: .12em
+}
+
+.coding-rule {
+  position: absolute;
+  right: -30px;
+  bottom: 28px;
+  width: 75%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--red), transparent);
+  transform: rotate(-25deg)
 }
 
 /* timeline */
@@ -439,6 +529,19 @@ h2 {
   .do {
     grid-template-columns: 1fr;
     gap: 10px
+  }
+
+  .coding {
+    grid-template-columns: 1fr;
+    gap: 32px
+  }
+
+  .coding-copy h2 {
+    max-width: 16ch
+  }
+
+  .coding-stat {
+    min-height: 210px
   }
 
   .tl .hand {
