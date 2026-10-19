@@ -102,7 +102,7 @@
     })
   });
 
-  // 5. Contact form: opens the visitor's email app. Swap for Formspree/EmailJS to send directly.
+  // 5. Contact form: validate before posting directly to Web3Forms.
   var form = $('#f');
   if (form) form.addEventListener('submit', function (ev) {
     var n = $('#n').value.trim(),
@@ -110,10 +110,11 @@
       m = $('#m').value.trim(),
       s = $('#s');
     if (!n || !/\S+@\S+\.\S+/.test(e) || !m) {
-      s.textContent = 'Please fill in all three fields.';
+      ev.preventDefault();
+      s.textContent = 'Enter your name, a valid email, and a message.';
       return
     }
-    s.textContent = 'Opening your email app…';
-    location.href = 'mailto:vanshkumarchandelofficial@gmail.com?subject=' + encodeURIComponent('Message from ' + n) + '&body=' + encodeURIComponent(m + '\n\n— ' + n + ' (' + e + ')');
+    s.textContent = 'Sending message…';
   });
 })();
+
