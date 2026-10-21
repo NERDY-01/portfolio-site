@@ -217,8 +217,10 @@ nav .bar {
   left: -20px;
   bottom: -30px
 }
-.pageframe{
-  width: 100%;;
+.pageframe {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 .legend {
   display: flex;
