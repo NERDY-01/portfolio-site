@@ -102,7 +102,7 @@
     })
   });
 
-  // 5. Contact form: validate before posting directly to Web3Forms.
+  // 5. Contact form: validate and post directly to Web3Forms.
   var form = $('#f');
   if (form) form.addEventListener('submit', function (ev) {
     var n = $('#n').value.trim(),
@@ -114,7 +114,42 @@
       s.textContent = 'Enter your name, a valid email, and a message.';
       return
     }
+    ev.preventDefault();
+    var submit = $('input[type="submit"]', form),
+      dialog = $('#success-dialog'),
+      close = $('#success-close');
     s.textContent = 'Sending message…';
+    submit.disabled = true;
+    fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
+      .then(function (response) {
+        return response.json().then(function (data) {
+          if (!response.ok || !data.success) throw new Error(data.message || 'Message could not be sent. Please try again.');
+          return data
+        })
+      })
+      .then(function () {
+        form.reset();
+        s.textContent = '';
+        if (dialog && typeof dialog.showModal === 'function') {
+          dialog.showModal();
+          close.focus()
+        } else {
+          s.textContent = 'Your message has been sent successfully.'
+        }
+      })
+      .catch(function (error) {
+        s.textContent = error.message || 'Message could not be sent. Please try again.';
+      })
+      .finally(function () {
+        submit.disabled = false
+      });
   });
+  var successDialog = $('#success-dialog');
+  if (successDialog) {
+    $('#success-close').addEventListener('click', function () { successDialog.close() });
+    successDialog.addEventListener('click', function (ev) {
+      if (ev.target === successDialog) successDialog.close()
+    });
+  }
 })();
 
